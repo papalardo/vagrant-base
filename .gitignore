@@ -1,3 +1,5 @@
 .vagrant/
 vhosts/*
 !vhosts/exemplo.conf
+www/*
+!www/exemplo/*
