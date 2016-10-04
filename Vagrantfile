@@ -5,9 +5,9 @@ VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
-    #config.vm.box = "ubuntu/trusty64"
-    config.vm.box = "precise64"
-    config.vm.box_url = "http://files.vagrantup.com/precise64.box"
+    config.vm.box = "ubuntu/trusty64"
+    #config.vm.box = "precise64"
+    #config.vm.box_url = "http://files.vagrantup.com/precise64.box"
     
     # Mount shared folder using NFS
     #config.vm.synced_folder ".", "/vagrant", id: "core", :nfs => true, :mount_options => ['nolock,vers=3,udp,noatime']
