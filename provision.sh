@@ -37,6 +37,12 @@ sudo apt-get upgrade
 if [ ! -f /var/log/firsttime ];
 then
     sudo touch /var/log/firsttime
+    
+    # echo "-- Ubuntu Locales pt_BR"
+    sudo locale-gen pt_BR
+    sudo locale-gen pt_BR.UTF-8
+    sudo dpkg-reconfigure locales
+    sudo update-locale LANG=pt_BR.UTF-8
 
     # echo "-- Prepare configuration for MySQL --"
     sudo debconf-set-selections <<< "mysql-server mysql-server/root_password password root"
